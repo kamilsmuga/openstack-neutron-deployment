@@ -27,7 +27,7 @@ def compute(command):
 def main(argv):
 
     parser = argparse.ArgumentParser(description='Manage OpenStack Neutron cluster set up via Vagrant')
-    parser.add_argument('commands', nargs='+', help='')
+    parser.add_argument('commands', nargs='+', help='[up, destroy, halt, suspend, ssh]')
     parser.add_argument('-n', '--node', dest='node', help='Specify a node when attempting to ssh.')
 
     args = parser.parse_args()
