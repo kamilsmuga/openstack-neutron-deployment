@@ -5,10 +5,24 @@ Vagrant auto deployment of three-node architecture with OpenStack Networking (ne
 
 ![Alt text](http://docs.openstack.org/icehouse/install-guide/install/apt/content/figures/1/figures/installguide_arch-neutron.png "Openstack three-node architecture with Neutron networking")
 
-### Deployment set up as documented here:
+## Deployment set up as documented here:
 http://docs.openstack.org/icehouse/install-guide/install/apt/content/ch_basics.html
 
-### Config structure
+## Cluster operations control
+```
+usage: cluster.py [-h] [-n NODE] commands [commands ...]
+
+Manage OpenStack Neutron cluster set up via Vagrant
+
+positional arguments:
+  commands [up, destroy, halt, suspend, ssh]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -n NODE, --node NODE  Specify a node when attempting to ssh.
+```
+
+## Config structure
 
 #### controller-node
 1. puppet/manifests - puppet manifest files
