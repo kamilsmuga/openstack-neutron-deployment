@@ -11,7 +11,15 @@ http://docs.openstack.org/icehouse/install-guide/install/apt/content/ch_basics.h
 ### Config structure
 
 #### controller-node
-1. shell/ - shell provisioning scripts
-  * network.sh - sets up default gateway through `route` tool. Note: does not work with `vagrant reload`. Have to use `vagrant provision` to have correctly set up default gateway 
-2. puppet/manifests - puppet manifest files
+1. puppet/manifests - puppet manifest files
   * network.pp - network manifest to manipulate /etc/hosts file
+
+#### compute-node
+1. puppet/manifests - puppet manifest files
+  * network.pp - network manifest to manipulate /etc/hosts file
+  
+#### network-node
+1. puppet/manifests - puppet manifest files
+  * network.pp - network manifest to manipulate /etc/hosts file
+2. shell/
+  * network.sh - overrides eth3 interface configuration to IP-less external interface (point 3 http://docs.openstack.org/icehouse/install-guide/install/apt/content/basics-neutron-networking-network-node.html)
